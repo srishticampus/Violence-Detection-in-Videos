@@ -1,0 +1,318 @@
+<!doctype html>
+{% load static %}
+
+<html lang="zxx">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block tittle %}  {% endblock %}</title>
+    <link rel="icon" href="{% static 'img/favicon.png' %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+    <!-- magnific popup CSS -->
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+    <!-- custom style CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+
+<body>
+    <div class="body_bg">
+        <!--::header part start::-->
+        <header class="main_menu single_page_menu">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <a class="navbar-brand" href="{% url 'index' %}">
+                                {% comment %} <img src="{% static 'img/logo.png' %}" alt="Violence in Videos Logo"> {% endcomment %}
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="menu_icon"><i class="fas fa-bars"></i></span>
+                            </button>
+        
+                            <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'index' %}">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'user_signup' %}">Signup</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'user_signin' %}">Sign</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="articles.html" id="navbarDropdown"
+                                            role="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            Violence Detection
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="{% url 'upload_image' %}">Images</a>
+                                            <a class="dropdown-item" href="{% url 'upload_video' %}">Videos</a>
+                                        </div>
+                                    </li>
+                                    {% comment %} <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1"
+                                            role="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            Resources
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                            <a class="dropdown-item" href="videos.html">Video Library</a>
+                                            <a class="dropdown-item" href="stats.html">Statistics</a>
+                                        </div>
+                                    </li> {% endcomment %}
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            {% comment %} <a href="#" class="btn_1 d-none d-sm-block">Get Involved</a> {% endcomment %}
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+
+        
+        <!-- Header part end-->
+
+        <!-- banner part start-->
+        <section class="banner_part">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-lg-6 col-md-8">
+                        <div class="banner_text">
+                            <div class="banner_text_iner">
+                                <h1>Explore Violence Depiction <br> in Videos</h1>
+                                <p>Understanding how violent content in video media impacts viewers, behavior, and society. Dive into curated analysis and latest studies.</p>
+                                <a href="#" class="btn_1">Start Exploring</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        {% block content %} {% endblock %}
+
+        
+        <!--::client logo part end::-->
+
+      <!-- about_us part start-->
+<section class="about_us section_padding">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-md-5 col-lg-6 col-xl-6">
+                <div class="learning_img">
+                    <img src="{% static 'img/about_img.png' %}" alt="About Violence in Videos">
+                </div>
+            </div>
+            <div class="col-md-7 col-lg-6 col-xl-5">
+                <div class="about_us_text">
+                    <h2>Discover Our Research Journey</h2>
+                    <p>We delve into the history and impact of violence in video content, exploring psychological, social, and cultural effects through deep analysis and data-driven studies.</p>
+                    <a href="#" class="btn_1">Learn More</a>
+                    <a href="#" class="btn_1">Watch Insights</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- about_us part end-->
+
+        <!--::about_us part start::-->
+        {% comment %} <section class="live_stareams padding_bottom">
+            <div class="container-fluid">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-md-2 offset-lg-2 offset-sm-1">
+                        <div class="live_stareams_text">
+                            <h2>live <br> stareams</h2>
+                            <div class="btn_1">install now</div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 offset-sm-1">
+                        <div class="live_stareams_slide owl-carousel">
+                            <div class="live_stareams_slide_img">
+                                <img src="{% static 'img/live_streams_1.png' %}" alt="">
+                                <div class="extends_video">
+                                    <a id="play-video_1" class="video-play-button popup-youtube"
+                                        href="https://www.youtube.com/watch?v=pBFQdxA-apI">
+                                        <span class="fas fa-play"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="live_stareams_slide_img">
+                                <img src="{% static 'img/live_streams_2.png' %}" alt="">
+                                <div class="extends_video">
+                                    <a id="play-video_1" class="video-play-button popup-youtube"
+                                        href="https://www.youtube.com/watch?v=pBFQdxA-apI">
+                                        <span class="fas fa-play"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="live_stareams_slide_img">
+                                <img src="{% static 'img/live_streams_1.png' %}" alt="">
+                                <div class="extends_video">
+                                    <a id="play-video_1" class="video-play-button popup-youtube"
+                                        href="https://www.youtube.com/watch?v=pBFQdxA-apI">
+                                        <span class="fas fa-play"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="live_stareams_slide_img">
+                                <img src="{% static 'img/live_streams_2.png' %}" alt="">
+                                <div class="extends_video">
+                                    <a id="play-video_1" class="video-play-button popup-youtube"
+                                        href="https://www.youtube.com/watch?v=pBFQdxA-apI">
+                                        <span class="fas fa-play"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="live_stareams_slide_img">
+                                <img src="{% static 'img/live_streams_1.png' %}" alt="">
+                                <div class="extends_video">
+                                    <a id="play-video_1" class="video-play-button popup-youtube"
+                                        href="https://www.youtube.com/watch?v=pBFQdxA-apI">
+                                        <span class="fas fa-play"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="live_stareams_slide_img">
+                                <img src="{% static 'img/live_streams_2.png' %}" alt="">
+                                <div class="extends_video">
+                                    <a id="play-video_1" class="video-play-button popup-youtube"
+                                        href="https://www.youtube.com/watch?v=pBFQdxA-apI">
+                                        <span class="fas fa-play"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="live_stareams_slide_img">
+                                <img src="{% static 'img/live_streams_1.png' %}" alt="">
+                                <div class="extends_video">
+                                    <a id="play-video_1" class="video-play-button popup-youtube"
+                                        href="https://www.youtube.com/watch?v=pBFQdxA-apI">
+                                        <span class="fas fa-play"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="live_stareams_slide_img">
+                                <img src="{% static 'img/live_streams_2.png' %}" alt="">
+                                <div class="extends_video">
+                                    <a id="play-video_1" class="video-play-button popup-youtube"
+                                        href="https://www.youtube.com/watch?v=pBFQdxA-apI">
+                                        <span class="fas fa-play"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> {% endcomment %}
+        <!--::about_us part end::-->
+                                  
+
+
+      <!--::footer_part start::-->
+<footer class="footer_part">
+    <div class="footer_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="single_footer_part">
+                        <a href="index.html" class="footer_logo_iner">
+                            <img src="{% static 'img/logo.png' %}" alt="Violence in Videos Logo">
+                        </a>
+                        <p>Dedicated to researching and raising awareness about the impact of violence in digital media, video content, and its influence on society.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="single_footer_part">
+                        <h4>Contact Info</h4>
+                        <p>Address: Department of Media Studies, Example University, Your City.</p>
+                        <p>Phone: +1234 567 890</p>
+                        <p>Email: research@violenceinvideos.org</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="single_footer_part">
+                        <h4>Quick Links</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#">About Our Research</a></li>
+                            <li><a href="#">Case Studies</a></li>
+                            <li><a href="#">Publications</a></li>
+                            <li><a href="#">Media Guidelines</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="single_footer_part">
+                        <h4>Subscribe to Updates</h4>
+                        <p>Stay updated with our latest findings, reports, and awareness campaigns on violence in video content.</p>
+                        <div id="mc_embed_signup">
+                            <form target="_blank" action="#" method="get" class="subscribe_form relative mail_part">
+                                <input type="email" name="email" id="newsletter-form-email"
+                                    placeholder="Email Address" class="placeholder hide-on-focus"
+                                    onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = ' Email Address '">
+                                <button type="submit" name="submit" id="newsletter-submit"
+                                    class="email_icon newsletter-submit button-contactForm">
+                                    <i class="far fa-paper-plane"></i>
+                                </button>
+                                <div class="mt-10 info"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copygight_text">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="copyright_text">
+                        <p>&copy;<script>document.write(new Date().getFullYear());</script> Violence in Videos | Research & Awareness Initiative. All rights reserved.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer_icon social_icon">
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="single_social_icon"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#" class="single_social_icon"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#" class="single_social_icon"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#" class="single_social_icon"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--::footer_part end::-->
+</body>
+
+</html>

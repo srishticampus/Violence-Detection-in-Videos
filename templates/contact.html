@@ -1,0 +1,226 @@
+<!doctype html>
+{% load static %}
+
+<html lang="zxx">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Contact </title>
+  {% comment %} <link rel="icon" href="img/favicon.png"> {% endcomment %}
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <!-- animate CSS -->
+  <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+  <!-- owl carousel CSS -->
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <!-- font awesome CSS -->
+  <link rel="stylesheet" href="{% static 'css/all.css' %}">
+  <!-- flaticon CSS -->
+  <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+  <!-- font awesome CSS -->
+  <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+  <!-- swiper CSS -->
+  <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+  <!-- style CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+  <!--::header part start::-->
+  <header class="main_menu single_page_menu">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-12">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            {% comment %} <a class="navbar-brand" href="index.html"> <img src="img/logo.png" alt="logo"> </a> {% endcomment %}
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="menu_icon"><i class="fas fa-bars"></i></span>
+            </button>
+
+            <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="fighter.html">fighter</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="team.html">team</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Blog
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="blog.html"> blog</a>
+                    <a class="dropdown-item" href="single-blog.html">Single blog</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown1" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    pages
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item" href="elements.html">Elements</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+            {% comment %} <a href="#" class="btn_1 d-none d-sm-block">Install Now</a> {% endcomment %}
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header part end-->
+
+  <!-- breadcrumb start-->
+  <section class="breadcrumb breadcrumb_bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="breadcrumb_iner text-center">
+            <div class="breadcrumb_iner_item">
+              <h2>contact</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- breadcrumb start-->
+
+
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto text-center">
+                <h2 class="mb-4">Contact Us</h2>
+                <p class="lead">Have questions, concerns, or need support? We’re here to help. If you need to report content, seek guidance, or collaborate with us, feel free to reach out.</p>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h4 style="color:black">Contact Information</h4>
+                <p style="color:black"><strong>📍 Address:</strong> Your Office/Organization Location</p>
+                <p style="color:black"><strong>📞 Phone:</strong> +123 456 7890</p>
+                <p style="color:black"><strong>✉️ Email:</strong> contact@yourwebsite.com</p>
+            </div>
+
+            <div class="col-md-6">
+                <h4>Send Us a Message</h4>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Your Message</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Write your message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+ <!--::footer_part start::-->
+<footer class="footer_part black">
+  <div class="footer_top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-lg-3">
+          <div class="single_footer_part">
+            <a href="index.html" class="footer_logo_iner">
+              {% comment %} <img src="img/logo.png" alt="Logo"> {% endcomment %}
+            </a>
+            <p>We strive to raise awareness about violent content in media, helping people stay informed and protected.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="single_footer_part">
+            <h4>Contact Info</h4>
+            <p><strong>Address:</strong> 123 Awareness Street, Your City, Your Country.</p>
+            <p><strong>Phone:</strong> +123 456 7890</p>
+            <p><strong>Email:</strong> support@violenceawareness.com</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="single_footer_part">
+            <h4>Quick Links</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">Understanding Violence</a></li>
+              <li><a href="#">Report Harmful Content</a></li>
+              <li><a href="#">Parental Guidance</a></li>
+              <li><a href="#">Safe Viewing Tips</a></li>
+              <li><a href="#">Resources & Help</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="single_footer_part">
+            <h4>Stay Informed</h4>
+            <p>Subscribe to our newsletter to get updates on media safety, awareness campaigns, and expert insights.</p>
+            <div id="mc_embed_signup">
+              <form target="_blank"
+                action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                method="get" class="subscribe_form relative mail_part">
+                <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address"
+                  class="placeholder hide-on-focus" onfocus="this.placeholder = ''"
+                  onblur="this.placeholder = ' Email Address '">
+                <button type="submit" name="submit" id="newsletter-submit"
+                  class="email_icon newsletter-submit button-contactForm"><i class="far fa-paper-plane"></i></button>
+                <div class="mt-10 info"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copygight_text">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <div class="copyright_text">
+            <p>
+              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Promoting media safety and responsible content consumption.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="footer_icon social_icon">
+            <ul class="list-unstyled">
+              <li><a href="#" class="single_social_icon"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#" class="single_social_icon"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#" class="single_social_icon"><i class="fas fa-globe"></i></a></li>
+              <li><a href="#" class="single_social_icon"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--::footer_part end::-->

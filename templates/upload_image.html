@@ -1,0 +1,153 @@
+<!doctype html>
+{% load static %}
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Image Upload for Violence Detection</title>
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+  <!--::header part start::-->
+  <header class="main_menu single_page_menu">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-12">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="menu_icon"><i class="fas fa-bars"></i></span>
+            </button>
+
+            <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'upload_image' %}">Image Upload</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header part end-->
+
+  <!-- breadcrumb start-->
+  <section class="breadcrumb breadcrumb_bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="breadcrumb_iner text-center">
+            <div class="breadcrumb_iner_item">
+              <h2>Upload Image</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- breadcrumb end -->
+
+  <section id="image-upload" class="py-5 bg-light">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-md-8 mx-auto text-center">
+          <h2 class="mb-4">Upload an Image for Analysis</h2>
+          <p class="lead">Choose an image file to upload, and our system will predict if there is any violence in the image.</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="image" class="form-label">Select Image</label>
+              <input class="form-control" type="file" name="image" id="image" accept="image/*" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Upload Image</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--::footer_part start::-->
+  <footer class="footer_part black">
+    <div class="footer_top">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-lg-3">
+            <div class="single_footer_part">
+              <p>We strive to raise awareness about violent content in media, helping people stay informed and protected.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="single_footer_part">
+              <h4>Contact Info</h4>
+              <p><strong>Address:</strong> 123 Awareness Street, Your City, Your Country.</p>
+              <p><strong>Phone:</strong> +123 456 7890</p>
+              <p><strong>Email:</strong> support@violenceawareness.com</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="single_footer_part">
+              <h4>Quick Links</h4>
+              <ul class="list-unstyled">
+                <li><a href="#">Understanding Violence</a></li>
+                <li><a href="#">Report Harmful Content</a></li>
+                <li><a href="#">Parental Guidance</a></li>
+                <li><a href="#">Safe Viewing Tips</a></li>
+                <li><a href="#">Resources & Help</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="single_footer_part">
+              <h4>Stay Informed</h4>
+              <p>Subscribe to our newsletter to get updates on media safety, awareness campaigns, and expert insights.</p>
+              <form target="_blank" action="#" method="get" class="subscribe_form relative mail_part">
+                <input type="email" name="email" placeholder="Email Address" class="placeholder">
+                <button type="submit" class="email_icon newsletter-submit"><i class="far fa-paper-plane"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copygight_text">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <div class="copyright_text">
+              <p>
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Promoting media safety and responsible content consumption.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer_icon social_icon">
+              <ul class="list-unstyled">
+                <li><a href="#" class="single_social_icon"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#" class="single_social_icon"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#" class="single_social_icon"><i class="fas fa-globe"></i></a></li>
+                <li><a href="#" class="single_social_icon"><i class="fab fa-youtube"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--::footer_part end::-->
+
+  <script src="{% static 'js/jquery-1.12.1.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>
