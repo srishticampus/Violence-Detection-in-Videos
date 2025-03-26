@@ -14,6 +14,14 @@ urlpatterns = [
     path('success/', views.upload_success, name='image_upload_success'),
     path('upload-video/', views.upload_video_view, name='upload_video'),
     path('video-success/', views.video_upload_success, name='video_upload_success'),
+    path('articles/', views.articles, name='articles'),
+ 
+    path('articles/', views.articles, name='articles'),
+    path('predict_video/', views.predict_video, name='predict_video'),
+    path('predict_image/', views.predict_image, name='predict_image'),
+    path('upload_video/', views.upload_video, name='upload_video'),
+    path('upload_image/', views.upload_image, name='upload_image'),
+
 
 
 

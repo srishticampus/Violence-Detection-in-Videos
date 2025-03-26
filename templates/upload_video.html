@@ -63,14 +63,34 @@
 
       <div class="row mt-4">
         <div class="col-md-6 offset-md-3">
+          <!-- Video Upload Form -->
           <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-            {{ form.as_p }}
+            <div class="mb-3">
+              <label for="video" class="form-label">Upload Video:</label>
+              <input type="file" id="video" name="video" accept="video/*" class="form-control" required>
+            </div>
             <button type="submit" class="btn btn-primary w-100">Upload Video</button>
           </form>
         </div>
       </div>
 
+      <!-- Show predicted video if available -->
+      {% if predicted_video_url %}
+      <div class="row mt-5">
+        <div class="col-md-8 mx-auto text-center">
+          <div class="alert alert-success">
+            <h4>Prediction Completed! Watch the video below:</h4>
+            <video width="640" height="360" controls class="mt-3" autoplay>
+              <source src="{{ MEDIA_URL }}{{ predicted_video_url }}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- Previously Uploaded Videos -->
       <div class="row mt-5">
         <div class="col-md-12">
           <h4>Previously Uploaded Videos</h4>

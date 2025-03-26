@@ -151,3 +151,8 @@
 </body>
 
 </html>
+{% if prediction_label %}
+  <div class="alert alert-info mt-4">
+    <h4>Prediction: {{ prediction_label }}</h4>
+  </div>
+{% endif %}

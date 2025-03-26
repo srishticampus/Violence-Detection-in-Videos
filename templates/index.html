@@ -57,19 +57,8 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="{% url 'user_signin' %}">Signin</a>
                                     </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="articles.html" id="navbarDropdown"
-                                            role="button" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
-                                            Violence Detection
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="{% url 'user_signin' %}">Images</a>
-                                            <a class="dropdown-item" href="{% url 'upload_video' %}">Videos</a>
-                                        </div>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="{% url 'about' %}">About</a>
-                                        </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'articles' %}">Violence Detection</a>
                                     </li>
                                     {% comment %} <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1"
