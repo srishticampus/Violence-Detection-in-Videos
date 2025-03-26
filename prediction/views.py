@@ -14,7 +14,7 @@ from django.core.files.storage import FileSystemStorage
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 from django.conf import settings
-
+import gdown
 
 # Prediction code section starting
 
@@ -142,7 +142,24 @@ def upload_video(request):
 
 # Load the trained model once when the server starts
 model_path = os.path.join(settings.BASE_DIR, 'fight_detection_model.h5')
+def download_model_if_needed():
+    """Check if the model exists, if not, download it from Google Drive."""
+    if not os.path.exists(model_path):
+        print("Model not found. Downloading...")
+        drive_link = 'https://drive.google.com/uc?id=1FYDBtyrXItx3ZIDmLCeR_C6TrcPY-Ye2'
+        gdown.download(drive_link, model_path, quiet=False)
+        print("Model downloaded.")
+    else:
+        print("Model already exists.")
+
+# Download model if not present
+download_model_if_needed()
+
+# Load the trained model once when the server starts
 model = load_model(model_path)
+
+
+
 
 
 def articles(request):
