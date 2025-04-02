@@ -81,7 +81,7 @@
         <div class="col-md-8 mx-auto text-center">
           <div class="alert alert-success">
             <h4>Prediction Completed! Watch the video below:</h4>
-            <video width="640" height="360" controls class="mt-3" autoplay>
+            <video width="640" height="360" controls class="mt-3" autoplay loop muted>
               <source src="{{ MEDIA_URL }}{{ predicted_video_url }}" type="video/mp4">
               Your browser does not support the video tag.
             </video>
